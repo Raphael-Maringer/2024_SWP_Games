@@ -3,8 +3,9 @@ package at.ram.firstgame;
 import org.newdawn.slick.*;
 
 public class Rectangles extends BasicGame {
-    private int x;
-    private int y;
+    private float x;
+    private float y;
+    private float speed;
 
     public Rectangles(String title) {
         super(title);
@@ -13,16 +14,19 @@ public class Rectangles extends BasicGame {
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
         this.x = 100;
+        this.speed = 50.0f;
     }
 
     @Override
-    public void update(GameContainer gameContainer, int i) throws SlickException {
-        this.x++;
+    public void update(GameContainer gameContainer, int delta) throws SlickException {
+        this.x += (float)delta/this.speed;
+
+        /* this.x++;
         this.y++;
         if (this.x > 800) {
             this.x = 0;
             this.y = 0;
-        }
+        } */
     }
 
     @Override
