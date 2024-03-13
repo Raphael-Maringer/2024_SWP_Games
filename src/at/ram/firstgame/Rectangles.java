@@ -5,6 +5,9 @@ import org.newdawn.slick.*;
 public class Rectangles extends BasicGame {
     private float x;
     private float y;
+
+    private float rec_x;
+    private float rec_y;
     private float speed;
 
     public Rectangles(String title) {
@@ -33,6 +36,7 @@ public class Rectangles extends BasicGame {
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
         graphics.drawRect(this.x, this.y, 100, 100);
         graphics.drawString("Hello you!", 50, 50);
+        graphics.drawOval(this.);
     }
 
     public static void main(String[] argv) {
