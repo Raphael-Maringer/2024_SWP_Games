@@ -11,6 +11,7 @@ public class Rectangles extends BasicGame {
 
     private float rec_x;
     private float rec_y;
+
     private float speed;
 
     public Rectangles(String title) {
@@ -26,6 +27,7 @@ public class Rectangles extends BasicGame {
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
         this.rec_x += (float) delta / this.speed;
+        this.oval_x += delta / this.speed;
 
 
         /* this.x++;
