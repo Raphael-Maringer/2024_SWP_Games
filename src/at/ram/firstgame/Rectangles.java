@@ -3,7 +3,9 @@ package at.ram.firstgame;
 import org.newdawn.slick.*;
 
 public class Rectangles extends BasicGame {
-    private enum DIRECTION{RIGHT, LEFT, DOWN, UP};
+    private enum DIRECTION {RIGHT, LEFT, DOWN, UP}
+
+    ;
 
     private float sq_x;
     private float sq_y;
@@ -41,40 +43,63 @@ public class Rectangles extends BasicGame {
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
 
-    if (sq_direction == DIRECTION.RIGHT) {
-        this.sq_x += (float) delta/speed;
-        if (this.sq_x > 600) {
-            this.sq_direction = DIRECTION.DOWN;
+        if (sq_direction == DIRECTION.RIGHT) {
+            this.sq_x += (float) delta / speed;
+            if (this.sq_x > 650) {
+                this.sq_direction = DIRECTION.DOWN;
+            }
         }
-    }
 
         if (sq_direction == DIRECTION.DOWN) {
-            this.sq_x += (float) delta/speed;
-            if (this.sq_y > 400) {
+            this.sq_y += (float) delta / speed;
+            if (this.sq_y > 450) {
                 this.sq_direction = DIRECTION.LEFT;
             }
         }
 
         if (sq_direction == DIRECTION.LEFT) {
-            this.sq_x += (float) delta/speed;
-            if (this.sq_y > 100) {
+            this.sq_x -= (float) delta / speed;
+            if (this.sq_x < 50) {
                 this.sq_direction = DIRECTION.UP;
             }
         }
 
-        if (sq_direction == DIRECTION.LEFT) {
-            this.sq_x += (float) delta/speed;
-            if (this.sq_x > 400) {
-                this.sq_direction = DIRECTION.UP;
+        if (sq_direction == DIRECTION.UP) {
+            this.sq_y -= (float) delta / speed;
+            if (this.sq_y < 50) {
+                this.sq_direction = DIRECTION.RIGHT;
             }
         }
 
-        /* this.x++;
-        this.y++;
-        if (this.x > 800) {
-            this.x = 0;
-            this.y = 0;
-        } */
+        if (oval_direction == DIRECTION.RIGHT) {
+            this.oval_x += (float) delta / speed;
+            if (this.oval_x > 650) {
+                this.oval_direction = DIRECTION.LEFT;
+            }
+        }
+
+        if (oval_direction == DIRECTION.LEFT) {
+            this.oval_x -= (float) delta / speed;
+            if (this.oval_x < 50) {
+                this.oval_direction = DIRECTION.RIGHT;
+            }
+        }
+
+        if (cir_direction == DIRECTION.DOWN) {
+            this.cir_y += (float) delta / speed;
+            if (this.cir_y > 450) {
+                this.cir_direction = DIRECTION.UP;
+            }
+        }
+
+        if (cir_direction == DIRECTION.UP) {
+            this.cir_y -= (float) delta / speed;
+            if (this.cir_y < 50) {
+                this.cir_direction = DIRECTION.DOWN;
+            }
+        }
+
+
     }
 
 
