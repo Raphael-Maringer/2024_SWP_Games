@@ -5,6 +5,7 @@ import org.newdawn.slick.*;
 
 public class ObjectsGame extends BasicGame {
     private Rectangle rectangle;
+    private Rectangle rectangle1;
 
 
     public ObjectsGame(String title) {
@@ -14,11 +15,15 @@ public class ObjectsGame extends BasicGame {
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
         this.rectangle = new Rectangle(100,100,5);
+        this.rectangle1 = new Rectangle(5,400,10);
+
     }
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
         this.rectangle.update(delta);
+        this.rectangle1.update(delta);
+
     }
 
 
