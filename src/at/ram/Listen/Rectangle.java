@@ -3,7 +3,9 @@ package at.ram.Listen;
 import org.newdawn.slick.Graphics;
 
 public class Rectangle {
-    private enum DIRECTION {RIGHT, LEFT, DOWN, UP};
+    private enum DIRECTION {RIGHT, LEFT, DOWN, UP}
+
+    ;
     private float x;
     private float y;
     private float speed;
@@ -15,13 +17,14 @@ public class Rectangle {
     }
 
     public void render(Graphics graphics) {
-        graphics.drawRect(this.x, this.y, 10,10);
-        if (this.x>800) {
-            this.x = 0;
-        }
+        graphics.drawRect(this.x, this.y, 10, 10);
     }
 
     public void update(int delta) {
-        this.x += (float)delta/this.speed;
+        this.x += (float) delta / this.speed;
+
+        if (this.x > 800) {
+            this.x = 0;
+        }
     }
 }
