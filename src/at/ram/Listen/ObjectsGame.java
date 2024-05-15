@@ -37,8 +37,10 @@ public class ObjectsGame extends BasicGame {
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
+        graphics.drawString("Hello you!", 50, 50);
         for (Rectangle rectangle:this.rectangles) {
             rectangle.render(graphics);
+        }
     }
 
     public static void main(String[] argv) {

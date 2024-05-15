@@ -16,7 +16,7 @@ public class Rectangle {
 
     public void render(Graphics graphics) {
         graphics.drawRect(this.x, this.y, 10,10);
-        if (this.x>600) {
+        if (this.x>800) {
             this.x = 0;
         }
     }
