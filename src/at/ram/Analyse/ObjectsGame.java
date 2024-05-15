@@ -1,6 +1,6 @@
 package at.ram.Analyse;
 
-import at.ram.Aufgabe1Object.Rectangles;
+import at.ram.Analyse.Rectangle;
 import org.newdawn.slick.*;
 
 public class ObjectsGame extends BasicGame {
@@ -31,11 +31,12 @@ public class ObjectsGame extends BasicGame {
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
         graphics.drawString("Hello you!", 50, 50);
         this.rectangle.render(graphics);
+        this.rectangle1.render(graphics);
     }
 
     public static void main(String[] argv) {
         try {
-            AppGameContainer container = new AppGameContainer(new Rectangles("Rectangles"));
+            AppGameContainer container = new AppGameContainer(new ObjectsGame("Rectangle"));
             container.setDisplayMode(800, 600, false);
             container.start();
         } catch (SlickException e) {
