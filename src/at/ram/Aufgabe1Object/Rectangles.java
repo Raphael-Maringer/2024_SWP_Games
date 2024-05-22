@@ -3,7 +3,7 @@ package at.ram.Aufgabe1Object;
 import org.newdawn.slick.*;
 
 public class Rectangles extends BasicGame {
-    private enum DIRECTION {RIGHT, LEFT, DOWN, UP};
+    public enum DIRECTION {RIGHT, LEFT, DOWN, UP};
 
     private float sq_x;
     private float sq_y;
