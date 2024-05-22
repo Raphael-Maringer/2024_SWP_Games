@@ -1,8 +1,10 @@
-package at.ram.Listen;
-import java.util.Random;
+package at.ram.Interfaces;
+
 import org.newdawn.slick.Graphics;
 
-public class Circle {
+import java.util.Random;
+
+public class Circle implements Actor{
     private float x,y;
     private float speed;
     private int diameter;
