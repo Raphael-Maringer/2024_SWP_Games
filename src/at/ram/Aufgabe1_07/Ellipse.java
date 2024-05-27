@@ -30,4 +30,3 @@ public class Ellipse implements Actor {
         }
     }
 }
-
