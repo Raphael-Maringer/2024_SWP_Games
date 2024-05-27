@@ -24,7 +24,6 @@ public class Circle implements Actor {
     public void update(int delta) {
         Random random = new Random();
         this.y += (float) delta / this.speed;
-        this.diameter += (float) delta / this.speed;
         this.diameter += (float)delta/speed;
         if (this.y > 600){
             this.y = 0;
