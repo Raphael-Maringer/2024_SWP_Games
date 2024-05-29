@@ -1,7 +1,5 @@
 package at.ram.Bilder;
-
 import org.newdawn.slick.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
